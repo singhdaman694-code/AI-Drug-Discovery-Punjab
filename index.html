@@ -1,0 +1,385 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI in Medicine | Punjab, India</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  color: #263445;
+  line-height: 1.7;
+}
+
+header {
+  background: #102b4e;
+  color: white;
+  padding: 22px 8%;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 30px;
+}
+
+nav {
+  background: #174b79;
+  padding: 14px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 13px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #a9ddff;
+}
+
+.hero {
+  padding: 75px 10%;
+  text-align: center;
+  color: white;
+  background: linear-gradient(120deg, #123456, #167c9d);
+}
+
+.hero h2 {
+  font-size: 38px;
+  margin-bottom: 18px;
+}
+
+.hero p {
+  max-width: 750px;
+  margin: auto;
+}
+
+section {
+  padding: 55px 10%;
+  scroll-margin-top: 65px;
+}
+
+section h2 {
+  color: #174b79;
+  margin-bottom: 18px;
+  font-size: 28px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+  margin-top: 25px;
+}
+
+.card {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px #00000012;
+}
+
+.card h3 {
+  color: #167c9d;
+  margin-bottom: 10px;
+}
+
+.highlight {
+  background: #e3f2fa;
+}
+
+button {
+  background: #167c9d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 20px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+button:hover {
+  background: #102b4e;
+}
+
+#fact {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+iframe {
+  width: 100%;
+  height: 280px;
+  border: none;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+footer {
+  background: #102b4e;
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+
+@media(max-width: 600px) {
+  header h1 { font-size: 23px; }
+  .hero h2 { font-size: 29px; }
+  nav a {
+    display: inline-block;
+    margin: 5px;
+    font-size: 14px;
+  }
+  section { padding: 40px 7%; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Artificial Intelligence in Medicine</h1>
+  <p>Global Trends, Drug Discovery and Personalized Medicine</p>
+</header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#discovery">Drug Discovery</a>
+  <a href="#personalized">Personalized Medicine</a>
+  <a href="#punjab">Punjab, India</a>
+  <a href="#challenges">Challenges</a>
+  <a href="#team">Our Team</a>
+</nav>
+
+<div class="hero" id="home">
+  <h2>Transforming the Future of Healthcare</h2>
+  <p>
+    Exploring how Artificial Intelligence is changing drug discovery
+    and personalized medicine around the world, with a special focus
+    on the emerging healthcare ecosystem in Punjab, India.
+  </p>
+  <button onclick="showWelcome()">Explore Our Project</button>
+  <p id="welcome"></p>
+</div>
+
+<section id="discovery">
+  <h2>1. AI in Drug Discovery</h2>
+  <p>
+    Drug discovery is the process of identifying and developing
+    medicines to treat diseases. Traditional drug development can
+    take many years and requires extensive research and testing.
+    Artificial Intelligence can help researchers analyze large
+    amounts of biological and chemical information.
+  </p>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Faster Research</h3>
+      <p>AI can help researchers examine potential drug compounds
+      and identify promising candidates.</p>
+    </div>
+    <div class="card">
+      <h3>Protein Analysis</h3>
+      <p>AI tools can help scientists study protein structures
+      and understand biological processes.</p>
+    </div>
+    <div class="card">
+      <h3>Drug Development</h3>
+      <p>Machine learning can support different stages of
+      pharmaceutical research and development.</p>
+    </div>
+  </div>
+</section>
+
+<section id="personalized" class="highlight">
+  <h2>2. Personalized Medicine</h2>
+  <p>
+    Personalized medicine aims to make healthcare decisions
+    based on individual characteristics. These may include
+    genetics, medical history, lifestyle and other health
+    information. AI can help analyze complex health data
+    and support clinical decision-making.
+  </p>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Genetic Information</h3>
+      <p>AI can assist in studying genetic data to understand
+      differences between individuals.</p>
+    </div>
+    <div class="card">
+      <h3>Individual Treatment</h3>
+      <p>Data analysis may help healthcare professionals
+      evaluate treatment options for patients.</p>
+    </div>
+    <div class="card">
+      <h3>Health Predictions</h3>
+      <p>AI models can identify patterns in health information
+      that may support risk assessment.</p>
+    </div>
+  </div>
+</section>
+
+<section id="punjab">
+  <h2>3. Emerging Ecosystem in Punjab, India</h2>
+  <p>
+    Punjab has opportunities to participate in the growing
+    healthcare technology and biotechnology sectors in India.
+    Universities, hospitals, research institutions and
+    technology companies can contribute to this development.
+  </p>
+  <p>
+    Collaboration between healthcare professionals, researchers
+    and technology developers could support AI-based research,
+    digital healthcare services and future personalized
+    medicine initiatives.
+  </p>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Universities</h3>
+      <p>Academic institutions can support research, education
+      and collaboration in healthcare technology.</p>
+    </div>
+    <div class="card">
+      <h3>Healthcare Institutions</h3>
+      <p>Hospitals and laboratories can explore responsible
+      applications of AI in healthcare.</p>
+    </div>
+    <div class="card">
+      <h3>Innovation</h3>
+      <p>Partnerships can help develop local expertise
+      and technology-based healthcare solutions.</p>
+    </div>
+  </div>
+  <p><strong>Research note:</strong> These are potential areas
+  of development, not claims that every institution already
+  uses AI drug discovery systems.</p>
+</section>
+
+<section id="challenges" class="highlight">
+  <h2>4. Benefits and Challenges</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Potential Benefits</h3>
+      <ul>
+        <li>Faster analysis of research data</li>
+        <li>Support for scientific discovery</li>
+        <li>More personalized treatment research</li>
+        <li>Improved research efficiency</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Important Challenges</h3>
+      <ul>
+        <li>Patient data privacy</li>
+        <li>Bias in AI systems</li>
+        <li>Accuracy and reliability</li>
+        <li>Regulation and accountability</li>
+        <li>Cost and accessibility</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="explore">
+  <h2>5. Explore AI Research</h2>
+  <p>
+    Learn more about artificial intelligence and health research
+    through the World Health Organization.
+  </p>
+  <iframe
+    src="https://www.who.int/health-topics/digital-health"
+    title="WHO Digital Health Information">
+  </iframe>
+</section>
+
+<section id="team">
+  <h2>6. Our Project Team</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Damanjot Singh</h3>
+      <p>Student ID: 816843</p>
+    </div>
+    <div class="card">
+      <h3>Jasmohit Singh Gill</h3>
+      <p>Student ID: 817186</p>
+    </div>
+  </div>
+  <p style="margin-top:20px">
+    This project explores global developments in AI for drug
+    discovery and personalized medicine, focusing on opportunities
+    and challenges in Punjab, India.
+  </p>
+</section>
+
+<section id="references">
+  <h2>7. Research References</h2>
+  <ul>
+    <li><a href="https://www.who.int/health-topics/digital-health"
+    target="_blank">World Health Organization – Digital Health</a></li>
+    <li><a href="https://www.fda.gov/science-research/science-and-research-special-topics/artificial-intelligence-and-machine-learning-aiml-drug-development"
+    target="_blank">US FDA – AI and Machine Learning in Drug Development</a></li>
+    <li><a href="https://pubmed.ncbi.nlm.nih.gov/"
+    target="_blank">PubMed – Biomedical Research Database</a></li>
+  </ul>
+  <p style="margin-top:15px">
+    These are starting points for research. Specific claims in
+    the final project should be supported by individual sources.
+  </p>
+</section>
+
+<footer>
+  <p>CSCI 101 Final Project | Damanjot Singh and Jasmohit Singh Gill</p>
+  <p>AI for Drug Discovery and Personalized Medicine</p>
+</footer>
+
+<script>
+function showWelcome() {
+  document.getElementById("welcome").innerHTML =
+    "Welcome! Explore how AI may transform healthcare.";
+}
+
+// Store project topics in an array.
+let topics = [
+  "AI in Drug Discovery",
+  "Personalized Medicine",
+  "Punjab Healthcare Ecosystem",
+  "Benefits and Challenges"
+];
+
+// Use a loop to display the project topics in the console.
+for (let i = 0; i < topics.length; i++) {
+  console.log("Project Topic: " + topics[i]);
+}
+
+// A function with a conditional statement.
+function checkTopicCount() {
+  if (topics.length >= 4) {
+    console.log("The project covers four main research areas.");
+  } else {
+    console.log("More research areas can be added.");
+  }
+}
+
+checkTopicCount();
+</script>
+
+</body>
+</html>
