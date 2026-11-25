@@ -4,6 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>AI in Medicine | Punjab, India</title>
 
 <style>
@@ -24,28 +25,34 @@ body {
 header {
   background: #102b4e;
   color: white;
-  padding: 22px 8%;
+  padding: 30px 8%;
   text-align: center;
 }
 
 header h1 {
-  font-size: 30px;
+  font-size: 32px;
+  margin-bottom: 5px;
+}
+
+header p {
+  color: #d5e9f8;
 }
 
 nav {
   background: #174b79;
-  padding: 14px;
+  padding: 15px 10px;
   text-align: center;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 100;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  margin: 0 13px;
+  margin: 7px 12px;
   font-weight: bold;
+  display: inline-block;
 }
 
 nav a:hover {
@@ -53,50 +60,90 @@ nav a:hover {
 }
 
 .hero {
-  padding: 75px 10%;
+  min-height: 390px;
+  padding: 95px 10%;
   text-align: center;
   color: white;
-  background: linear-gradient(120deg, #123456, #167c9d);
+  background:
+    linear-gradient(120deg, rgba(10,35,65,.92),
+    rgba(15,105,145,.78)),
+    url("https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1600")
+    center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero h2 {
-  font-size: 38px;
+  font-size: 42px;
   margin-bottom: 18px;
 }
 
 .hero p {
-  max-width: 750px;
-  margin: auto;
+  max-width: 800px;
+  font-size: 17px;
+}
+
+.hero button {
+  background: #ffffff;
+  color: #174b79;
+}
+
+.hero button:hover {
+  background: #dceefa;
 }
 
 section {
-  padding: 55px 10%;
-  scroll-margin-top: 65px;
+  padding: 65px 9%;
+  scroll-margin-top: 70px;
 }
 
 section h2 {
   color: #174b79;
-  margin-bottom: 18px;
-  font-size: 28px;
+  margin-bottom: 20px;
+  font-size: 29px;
+}
+
+.section-intro {
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+
+.section-image {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin: 15px 0 25px;
+  box-shadow: 0 5px 18px #00000018;
 }
 
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 22px;
-  margin-top: 25px;
+  gap: 23px;
+  margin-top: 28px;
 }
 
 .card {
   background: white;
-  padding: 24px;
-  border-radius: 12px;
-  box-shadow: 0 3px 12px #00000012;
+  padding: 26px;
+  border-radius: 13px;
+  box-shadow: 0 4px 15px #00000010;
+  transition: transform .25s, box-shadow .25s;
+  border: 1px solid #e5edf5;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 22px #00000018;
 }
 
 .card h3 {
   color: #167c9d;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  font-size: 20px;
 }
 
 .highlight {
@@ -107,45 +154,103 @@ button {
   background: #167c9d;
   color: white;
   border: none;
-  border-radius: 6px;
-  padding: 12px 20px;
+  border-radius: 7px;
+  padding: 13px 23px;
   cursor: pointer;
-  margin-top: 15px;
+  margin-top: 20px;
+  font-size: 15px;
+  font-weight: bold;
+  transition: .2s;
 }
 
 button:hover {
   background: #102b4e;
 }
 
-#fact {
+#welcome {
   margin-top: 15px;
   font-weight: bold;
 }
 
-iframe {
-  width: 100%;
-  height: 280px;
-  border: none;
-  border-radius: 10px;
-  margin-top: 20px;
+ul {
+  padding-left: 23px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+.reference-list a {
+  color: #12658d;
+  text-decoration: none;
+}
+
+.reference-list a:hover {
+  text-decoration: underline;
+}
+
+.team-card {
+  text-align: center;
+  border-top: 4px solid #167c9d;
+}
+
+.team-card h3 {
+  color: #174b79;
+}
+
+.team-card p {
+  margin-top: 5px;
+}
+
+.research-note {
+  background: #ffffff;
+  border-left: 4px solid #167c9d;
+  padding: 18px;
+  margin-top: 25px;
+  border-radius: 5px;
 }
 
 footer {
   background: #102b4e;
   color: white;
   text-align: center;
-  padding: 25px;
+  padding: 30px 15px;
+}
+
+footer p {
+  margin: 5px;
 }
 
 @media(max-width: 600px) {
-  header h1 { font-size: 23px; }
-  .hero h2 { font-size: 29px; }
-  nav a {
-    display: inline-block;
-    margin: 5px;
-    font-size: 14px;
+  header h1 {
+    font-size: 25px;
   }
-  section { padding: 40px 7%; }
+
+  .hero {
+    padding: 70px 7%;
+    min-height: 350px;
+  }
+
+  .hero h2 {
+    font-size: 30px;
+  }
+
+  nav a {
+    font-size: 13px;
+    margin: 5px;
+  }
+
+  section {
+    padding: 42px 7%;
+  }
+
+  section h2 {
+    font-size: 25px;
+  }
+
+  .section-image {
+    height: 220px;
+  }
 }
 </style>
 </head>
@@ -155,6 +260,7 @@ footer {
 <header>
   <h1>Artificial Intelligence in Medicine</h1>
   <p>Global Trends, Drug Discovery and Personalized Medicine</p>
+  <p>Special Focus: Punjab, India</p>
 </header>
 
 <nav>
@@ -164,22 +270,32 @@ footer {
   <a href="#punjab">Punjab, India</a>
   <a href="#challenges">Challenges</a>
   <a href="#team">Our Team</a>
+  <a href="#references">References</a>
 </nav>
 
 <div class="hero" id="home">
   <h2>Transforming the Future of Healthcare</h2>
+
   <p>
     Exploring how Artificial Intelligence is changing drug discovery
     and personalized medicine around the world, with a special focus
     on the emerging healthcare ecosystem in Punjab, India.
   </p>
+
   <button onclick="showWelcome()">Explore Our Project</button>
+
   <p id="welcome"></p>
 </div>
 
 <section id="discovery">
   <h2>1. AI in Drug Discovery</h2>
-  <p>
+
+  <img
+    class="section-image"
+    src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=1200"
+    alt="Scientific laboratory and pharmaceutical research">
+
+  <p class="section-intro">
     Drug discovery is the process of identifying and developing
     medicines to treat diseases. Traditional drug development can
     take many years and requires extensive research and testing.
@@ -190,25 +306,39 @@ footer {
   <div class="cards">
     <div class="card">
       <h3>Faster Research</h3>
-      <p>AI can help researchers examine potential drug compounds
-      and identify promising candidates.</p>
+      <p>
+        AI can help researchers examine potential drug compounds
+        and identify promising candidates for further investigation.
+      </p>
     </div>
+
     <div class="card">
       <h3>Protein Analysis</h3>
-      <p>AI tools can help scientists study protein structures
-      and understand biological processes.</p>
+      <p>
+        AI tools can help scientists study protein structures
+        and understand biological processes.
+      </p>
     </div>
+
     <div class="card">
       <h3>Drug Development</h3>
-      <p>Machine learning can support different stages of
-      pharmaceutical research and development.</p>
+      <p>
+        Machine learning can support different stages of
+        pharmaceutical research and development.
+      </p>
     </div>
   </div>
 </section>
 
 <section id="personalized" class="highlight">
   <h2>2. Personalized Medicine</h2>
-  <p>
+
+  <img
+    class="section-image"
+    src="https://images.unsplash.com/photo-1530026405186-ed1f139313f8?w=1200"
+    alt="Genetic research and personalized medicine">
+
+  <p class="section-intro">
     Personalized medicine aims to make healthcare decisions
     based on individual characteristics. These may include
     genetics, medical history, lifestyle and other health
@@ -219,30 +349,45 @@ footer {
   <div class="cards">
     <div class="card">
       <h3>Genetic Information</h3>
-      <p>AI can assist in studying genetic data to understand
-      differences between individuals.</p>
+      <p>
+        AI can assist in studying genetic data to understand
+        differences between individuals.
+      </p>
     </div>
+
     <div class="card">
       <h3>Individual Treatment</h3>
-      <p>Data analysis may help healthcare professionals
-      evaluate treatment options for patients.</p>
+      <p>
+        Data analysis may help healthcare professionals
+        evaluate treatment options for patients.
+      </p>
     </div>
+
     <div class="card">
       <h3>Health Predictions</h3>
-      <p>AI models can identify patterns in health information
-      that may support risk assessment.</p>
+      <p>
+        AI models can identify patterns in health information
+        that may support risk assessment.
+      </p>
     </div>
   </div>
 </section>
 
 <section id="punjab">
   <h2>3. Emerging Ecosystem in Punjab, India</h2>
-  <p>
+
+  <img
+    class="section-image"
+    src="https://images.unsplash.com/photo-1581093458791-9d42e3c4c4d7?w=1200"
+    alt="Healthcare technology and scientific laboratory research">
+
+  <p class="section-intro">
     Punjab has opportunities to participate in the growing
     healthcare technology and biotechnology sectors in India.
     Universities, hospitals, research institutions and
     technology companies can contribute to this development.
   </p>
+
   <p>
     Collaboration between healthcare professionals, researchers
     and technology developers could support AI-based research,
@@ -253,23 +398,34 @@ footer {
   <div class="cards">
     <div class="card">
       <h3>Universities</h3>
-      <p>Academic institutions can support research, education
-      and collaboration in healthcare technology.</p>
+      <p>
+        Academic institutions can support research, education
+        and collaboration in healthcare technology.
+      </p>
     </div>
+
     <div class="card">
       <h3>Healthcare Institutions</h3>
-      <p>Hospitals and laboratories can explore responsible
-      applications of AI in healthcare.</p>
+      <p>
+        Hospitals and laboratories can explore responsible
+        applications of AI in healthcare.
+      </p>
     </div>
+
     <div class="card">
       <h3>Innovation</h3>
-      <p>Partnerships can help develop local expertise
-      and technology-based healthcare solutions.</p>
+      <p>
+        Partnerships can help develop local expertise
+        and technology-based healthcare solutions.
+      </p>
     </div>
   </div>
-  <p><strong>Research note:</strong> These are potential areas
-  of development, not claims that every institution already
-  uses AI drug discovery systems.</p>
+
+  <div class="research-note">
+    <strong>Research note:</strong>
+    These are potential areas of development, not claims
+    that every institution already uses AI drug discovery systems.
+  </div>
 </section>
 
 <section id="challenges" class="highlight">
@@ -283,8 +439,10 @@ footer {
         <li>Support for scientific discovery</li>
         <li>More personalized treatment research</li>
         <li>Improved research efficiency</li>
+        <li>New scientific opportunities</li>
       </ul>
     </div>
+
     <div class="card">
       <h3>Important Challenges</h3>
       <ul>
@@ -300,54 +458,113 @@ footer {
 
 <section id="explore">
   <h2>5. Explore AI Research</h2>
-  <p>
-    Learn more about artificial intelligence and health research
-    through the World Health Organization.
+
+  <img
+    class="section-image"
+    src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200"
+    alt="Digital healthcare and medical research">
+
+  <p class="section-intro">
+    Artificial Intelligence in healthcare is an expanding
+    research area. Explore the following trusted organizations
+    to learn more about digital health and drug development.
   </p>
-  <iframe
-    src="https://www.who.int/health-topics/digital-health"
-    title="WHO Digital Health Information">
-  </iframe>
+
+  <div class="cards">
+    <div class="card">
+      <h3>World Health Organization</h3>
+      <p>Information about digital health and global healthcare.</p>
+      <a href="https://www.who.int/health-topics/digital-health"
+         target="_blank" rel="noopener">
+        Explore WHO Digital Health
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>US Food and Drug Administration</h3>
+      <p>Information about AI and machine learning in drug development.</p>
+      <a href="https://www.fda.gov/science-research/science-and-research-special-topics/artificial-intelligence-and-machine-learning-aiml-drug-development"
+         target="_blank" rel="noopener">
+        Explore FDA Research
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>PubMed</h3>
+      <p>Biomedical and life sciences research publications.</p>
+      <a href="https://pubmed.ncbi.nlm.nih.gov/"
+         target="_blank" rel="noopener">
+        Search PubMed
+      </a>
+    </div>
+  </div>
 </section>
 
 <section id="team">
   <h2>6. Our Project Team</h2>
+
   <div class="cards">
-    <div class="card">
+    <div class="card team-card">
       <h3>Damanjot Singh</h3>
       <p>Student ID: 816843</p>
     </div>
-    <div class="card">
+
+    <div class="card team-card">
       <h3>Jasmohit Singh Gill</h3>
       <p>Student ID: 817186</p>
     </div>
   </div>
-  <p style="margin-top:20px">
+
+  <p style="margin-top:25px">
     This project explores global developments in AI for drug
     discovery and personalized medicine, focusing on opportunities
     and challenges in Punjab, India.
   </p>
 </section>
 
-<section id="references">
+<section id="references" class="highlight">
   <h2>7. Research References</h2>
-  <ul>
-    <li><a href="https://www.who.int/health-topics/digital-health"
-    target="_blank">World Health Organization – Digital Health</a></li>
-    <li><a href="https://www.fda.gov/science-research/science-and-research-special-topics/artificial-intelligence-and-machine-learning-aiml-drug-development"
-    target="_blank">US FDA – AI and Machine Learning in Drug Development</a></li>
-    <li><a href="https://pubmed.ncbi.nlm.nih.gov/"
-    target="_blank">PubMed – Biomedical Research Database</a></li>
-  </ul>
-  <p style="margin-top:15px">
-    These are starting points for research. Specific claims in
-    the final project should be supported by individual sources.
+
+  <p class="section-intro">
+    The following organizations and databases provide starting
+    points for further research into artificial intelligence
+    and healthcare.
   </p>
+
+  <ul class="reference-list">
+    <li>
+      <a href="https://www.who.int/health-topics/digital-health"
+         target="_blank" rel="noopener">
+        World Health Organization – Digital Health
+      </a>
+    </li>
+
+    <li>
+      <a href="https://www.fda.gov/science-research/science-and-research-special-topics/artificial-intelligence-and-machine-learning-aiml-drug-development"
+         target="_blank" rel="noopener">
+        US FDA – AI and Machine Learning in Drug Development
+      </a>
+    </li>
+
+    <li>
+      <a href="https://pubmed.ncbi.nlm.nih.gov/"
+         target="_blank" rel="noopener">
+        PubMed – Biomedical Research Database
+      </a>
+    </li>
+  </ul>
+
+  <div class="research-note">
+    Specific claims in the final project should be supported
+    by individual research publications and complete citations.
+  </div>
 </section>
 
 <footer>
-  <p>CSCI 101 Final Project | Damanjot Singh and Jasmohit Singh Gill</p>
+  <p><strong>CSCI 101 Final Project</strong></p>
+  <p>Damanjot Singh and Jasmohit Singh Gill</p>
   <p>AI for Drug Discovery and Personalized Medicine</p>
+  <p>Special Focus: Punjab, India</p>
 </footer>
 
 <script>
@@ -364,12 +581,12 @@ let topics = [
   "Benefits and Challenges"
 ];
 
-// Use a loop to display the project topics in the console.
+// Use a loop to display project topics.
 for (let i = 0; i < topics.length; i++) {
   console.log("Project Topic: " + topics[i]);
 }
 
-// A function with a conditional statement.
+// Function with a conditional statement.
 function checkTopicCount() {
   if (topics.length >= 4) {
     console.log("The project covers four main research areas.");
